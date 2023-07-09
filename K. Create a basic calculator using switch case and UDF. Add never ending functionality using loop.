@@ -1,0 +1,79 @@
+#include <iostream>
+using namespace std;
+
+int add(int a, int b)
+{
+    return a + b;
+}
+
+int sub(int a, int b)
+{
+    return a - b;
+}
+
+int mul(int a, int b)
+{
+    return a * b;
+}
+
+int div(int a, int b)
+{
+    return a / b;
+}
+
+int mod(int a, int b)
+{
+    return a % b;
+}
+int main()
+{
+    int a, b, choice;
+    
+    do
+    {
+        cout << "Select operation:" <<endl;
+        cout << "1. Addition" <<endl;
+        cout << "2. Subtraction" <<endl;
+        cout << "3. Multiplication" <<endl;
+        cout << "4. Division" <<endl;
+        cout << "5. Modulus" <<endl;
+        cout << "6. Exit" << endl << endl;
+        cout << "Select One :- ";
+        cin >> choice;
+        cout << endl;
+
+        switch (choice)
+        {
+        case 1:
+            cout << "Enter two numbers: ";
+            cin >> a >> b;
+            cout << "The sum is " << add(a, b) << endl;
+            break;
+        case 2:
+            cout << "Enter two numbers: ";
+            cin >> a >> b;
+            cout << "The difference is " << sub(a, b) << endl;
+            break;
+        case 3:
+            cout << "Enter two numbers: ";
+            cin >> a >> b;
+            cout << "The product is "<< mul(a, b) << endl;
+            break;
+        case 4:
+            cout << "Enter two numbers: ";
+            cin >> a >> b;
+            cout << "The quotient is " << div(a, b) << endl;
+            break;
+        case 5:
+            cout << "Enter two numbers: ";
+            cin >> a >> b;
+            cout << "The modulus is " << mod(a, b) << endl;
+            break;
+        case 6:
+            break;
+        default:
+            cout << "Invalid choice." << endl;
+        }
+    } while (choice != 6);;
+    return 0;
+}
