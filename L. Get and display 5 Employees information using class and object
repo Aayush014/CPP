@@ -1,0 +1,66 @@
+#include<iostream>
+using namespace std;
+
+class employe
+{
+    private:
+    int emp_id;
+    string emp_name;
+    string emp_role;
+    int emp_age;
+    int emp_salary;
+    int emp_experience;
+    string emp_city;
+    static string emp_company_name;
+
+    public:
+        void input()
+        {
+            cout << "Employe Id:- ";
+            cin >> emp_id;
+            cout << "Employe Name:- ";
+            cin >> emp_name;
+            cout << "Role:-";
+            cin >> emp_role;
+            cout << "Age:-";
+            cin >> emp_age;
+            cout << "Salary:-";
+            cin >> emp_salary;
+            cout << "Experience:-";
+            cin >> emp_experience;
+            cout << "City:-";
+            cin >> emp_city;
+            cout << endl;
+        }
+        void output()
+        {
+            cout << "Employe Id:- " << emp_id << endl;
+            cout << "Employe Name:- " << emp_name << endl;
+            cout << "Role:-" << emp_role << endl;
+            cout << "Age:-" << emp_age << endl;
+            cout << "Salary:-" << emp_salary << endl;
+            cout << "Experience:-" << emp_experience << endl;
+            cout << "City:-" << emp_city << endl;
+        }
+        static void basic()
+        {
+            cout << emp_company_name << endl << endl << endl;
+        } 
+};
+
+string employe :: emp_company_name = "Aayush Patel &CO.";
+
+int main()
+{
+	employe e1[20];
+	int n;
+	cout << "Enter Limit : ";
+	cin >> n;
+	for(int i=0; i<n; i++)
+	{
+		e1[i].input();
+		e1[i].output();
+		e1[i].basic();
+	}
+	return 0;
+}
