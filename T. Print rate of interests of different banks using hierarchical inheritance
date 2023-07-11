@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+class RBI 
+{
+public:
+    float rate;
+    RBI(float rate) 
+	{
+        this->rate = rate;
+    }
+    float getROI() 
+	{
+        return rate;
+    }
+};
+class SBI : 
+	public RBI 
+{
+public:
+    SBI(float rate) : RBI(rate) {}
+};
+class BOB :
+	 public RBI 
+{
+public:
+    BOB(float rate) : RBI(rate) {}
+};
+class ICICI : 
+	public RBI 
+{
+public:
+    ICICI(float rate) : RBI(rate) {}
+};
+int main() 
+{
+    SBI sbi(8.2);
+    BOB bob(7.8);
+    ICICI icici(7.6);
+    cout << "SBI rate of interest: " << sbi.getROI() << endl;
+    cout << "BOB rate of interest: " << bob.getROI() << endl;
+    cout << "ICICI rate of interest: " << icici.getROI() << endl;
+    return 0;
+}
