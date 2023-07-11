@@ -4,7 +4,7 @@ using namespace std;
 class fastFoodCafe
 {
 	private:
-	int cafe_id;
+    int cafe_id;
     string cafe_name;
     string cafe_type;
     int cafe_rating;
