@@ -1,0 +1,59 @@
+#include<iostream>
+using namespace std;
+
+class student
+{
+private:
+    int stu_id;
+    string stu_name;
+    int stu_age;
+    string stu_course;
+    string stu_email;
+    string stu_city;
+    string stu_college;
+
+public:
+void input()
+	{
+	
+    cout << "Enter Student Id:- ";
+    cin >> stu_id;
+    cout << "Enter Student Name:- ";
+    cin >> stu_name;
+    cout << "Age:- ";
+    cin >> stu_age;
+    cout << "Course:- ";
+    cin >> stu_course;
+    cout << "Email Id:- ";
+    cin >> stu_email;
+    cout << "City:- ";
+    cin >> stu_city;
+    cout << "College Name:- ";
+    cin >> stu_college;
+    cout << endl;
+}
+void output()
+{
+	cout << "Student Id:- " << stu_id << endl;
+	cout << "Student Name:- " << stu_name << endl;
+	cout << "Student Age:- " << stu_age << endl;
+	cout << "Student Course:- " << stu_course << endl;
+	cout << "Student Email:- " << stu_email << endl;
+	cout << "Student City:- " << stu_city;
+	cout << "Student College:- " << stu_college << endl << endl << endl;
+}
+};
+
+int main()
+{
+	student s1[20];
+	int n;
+	cout << "Enter Limit : ";
+	cin >> n;
+	for(int i=0; i<n; i++)
+	{
+		s1[i].input();
+		s1[i].output();
+	}
+	return 0;
+}
