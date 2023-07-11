@@ -1,0 +1,59 @@
+#include<iostream>
+using namespace std;
+
+class fastFoodCafe
+{
+	private:
+	int cafe_id;
+    string cafe_name;
+    string cafe_type;
+    int cafe_rating;
+    string cafe_location;
+    int cafe_establish_year;
+    int cafe_staff_quantity;
+    
+    public:
+    	void input()
+    	{
+    		cout << "Enter Cafe Id:- ";
+    		cin >> cafe_id;
+    		cout << "Enter Cafe Name:- ";
+    		cin >> cafe_name;
+    		cout << "Type of Cafe:- ";
+    		cin >> cafe_type;
+    		cout << "Star Ratings:- ";
+    		cin >> cafe_rating;
+    		cout << "Location:- ";
+    		cin >> cafe_location;
+    		cout << "Year of Establish:- ";
+    		cin >> cafe_establish_year;
+    		cout << "Staff Quantity:- ";
+    		cin >> cafe_staff_quantity;
+    		cout << endl;
+		}
+		
+		void output()
+		{
+		    cout << "Cafe Id:- " << cafe_id << endl;
+		    cout << "Cafe Name:- " << cafe_name << endl;
+		    cout << "Cafe Type:- " << cafe_type << endl;
+		    cout << "Cafe rating:- " << cafe_rating <<endl;
+		    cout << "Cafe Location:- " << cafe_location << endl;
+		    cout << "Cafe was Established in " << cafe_establish_year << endl;
+		    cout << "Cafe's staff Quentity is " << cafe_staff_quantity << endl <<endl << endl;
+	    }
+};
+
+int main()
+{
+	fastFoodCafe f1[20];
+	int n;
+	cout << "Enter Limit : ";
+	cin >> n;
+	for(int i=0; i<n; i++)
+	{
+		f1[i].input();
+		f1[i].output();
+	}
+	return 0;
+}
