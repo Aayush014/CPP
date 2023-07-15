@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+
+class Cricket 
+{
+public :
+    int getTotalOvers() 
+	{
+        return 50;
+    }
+};
+class T20Match : public Cricket 
+{
+	public :
+    int getTotalOvers() 
+	{
+        return 20;
+    }
+};
+class TestMatch : public Cricket 
+{
+	public :
+    int getTotalOvers() 
+	{
+        return 90;
+    }
+};
+int main() 
+{
+	Cricket cricket;
+	T20Match t20Match;
+	TestMatch testMatch;
+    cout << "Total overs in a cricket match: " << cricket.getTotalOvers() << endl;
+    cout << "Total overs in a T20 match: " << t20Match.getTotalOvers() << endl;
+    cout << "Total overs in a test match: " << testMatch.getTotalOvers() << endl;
+    return 0;
+}
