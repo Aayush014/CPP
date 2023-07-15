@@ -2,36 +2,36 @@
 using namespace std;
 class earth
 {
-	public :
-		int num;
-	public :
-		void input()
+    public :
+	int num;
+    public :
+	void input()
 		{
-			cin>>num;
+		    cin>>num;
 		}
 		int operator >(earth x)
 		{
-			if(num>x.num)
-			return 1;
-			else
-			return 0;
+		if(num>x.num)
+		    return 1;
+		else
+		    return 0;
 		}
 };
 int main()
 {
-	earth e1,e2;
-	cout<<"Enter A :- ";
-	e1.input();
-	cout<<"Enter B :- ";
-	e2.input();
-	cout << endl;
-	if(e1>e2)
-	{
-		cout << "A is greater than B";
-	}
-	else
-	{
-		cout << "B is greater than A";
-	}
-	return 0;
+  earth e1,e2;
+  cout<<"Enter A :- ";
+  e1.input();
+  cout<<"Enter B :- ";
+  e2.input();
+  cout << endl;
+  if(e1>e2)
+  {
+	cout << "A is greater than B";
+  }
+  else
+  {
+	cout << "B is greater than A";
+  }
+  return 0;
 }
