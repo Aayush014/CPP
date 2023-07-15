@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+class P 
+{
+   public:
+       float temperature;
+};
+
+class Q : public P 
+{
+   public:
+       float toFehrenheit();
+};
+
+class R : public Q 
+{
+   public:
+       float toKelvin();
+};
+
+int main()
+{
+	float temperature;
+    cout << "Enter Value in Celsius:- ";
+    cin >> temperature;
+    cout << "Temperature in Fahrenheit: " << (temperature * 9 / 5) + 32 << endl;
+    cout << "Temperature in Kelvin: " << temperature + 273.15 << endl;
+    R obj;
+    return 0;
+}
